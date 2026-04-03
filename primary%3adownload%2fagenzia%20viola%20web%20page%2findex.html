@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenzia Viola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+	.logo {
+    	width: 150px;
+   	 height: auto;
+    	margin: 0 auto 0px;
+    	display: block;
+    	/*border-radius: 50%;
+    	border: 3px solid #FFBF00;
+    	background: white;*/
+    	padding: 5px;
+	}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #faf7ff;
+        }
+
+        /* Navbar */
+        header {
+            background: #6A0DAD;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 25px;
+            color: #FFBF00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFBF00;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Home */
+
+	 #home {
+            background: linear-gradient(rgba(106,13,173,0.7), rgba(106,13,173,0.7)),
+                        url(background.jpg) no-repeat center/cover;
+            color: white;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        } 
+
+
+
+
+#home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background slider */
+#home::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 10% center;
+    animation: slideShow 15s infinite;
+    z-index: -1;
+}
+
+/* Purple overlay */
+#home::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 13, 173, 0.0); /* French purple overlay */
+    z-index: -1;
+} 
+
+/* Animation */
+@keyframes slideShow {
+    0% {
+        background-image: url('image1.jpg');
+    }
+    33% {
+        background-image: url('image2.jpg');
+    }
+    66% {
+        background-image: url('image3.jpg');
+    }
+    100% {
+        background-image: url('image1.jpg');
+    }
+}
+
+
+
+
+
+  #home h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 20px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #FFBF00;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e6ac00;
+        }  
+
+
+
+
+       
+
+
+        /* Services */
+        #services {
+            background: #f3e9ff;
+        }
+
+        #services h2 {
+            color: #6A0DAD;
+            margin-bottom: 30px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-top: 5px solid #FFBF00;
+        }
+
+        .card h3 {
+            color: #6A0DAD;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+/* Ribbon Footer */
+.ribbon-footer {
+    margin-top: 40px;
+    position: relative;
+}
+
+.ribbon-footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optional: make it overlap nicely */
+/*#services {
+    position: relative;
+    padding-bottom: 0;
+}*/
+
+        /* Contact */
+        #contact h2 {
+            color: #6A0DAD;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #6A0DAD;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background: #4b087a;
+        }
+
+        /* Footer */
+        footer {
+            background: #6A0DAD;
+            color: #FFBF00;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav>
+        <h1>Agenzia Viola</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home -->
+<section id="home">
+    <img src="logo.png" alt="Travel Logo" class="logo">
+
+    <h2>Explore the World</h2>
+    <p>Nessun limite, eccetto il cielo</p>
+
+    <a href="tel:+94716199507" class="btn">Book Now</a>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="card">
+            <h3>Flight Booking</h3>
+            <p>Affordable flights to anywhere in the world.</p>
+        </div>
+        <div class="card">
+            <h3>Money Transfer</h3>
+            <p>24/7 service, fast & secured, trustworthy.</p>
+        </div>
+        <div class="card">
+            <h3>Tour Packages</h3>
+            <p>Custom travel packages for your dream vacation.</p>
+        </div>
+<div class="ribbon-footer">
+    <img src="ribbon.png" alt="Ribbon Decoration">
+</div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:skandegamage@gmail.com method="post" enctype="text/plain">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Agenzia Viola | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
